@@ -1,0 +1,429 @@
+[index.html](https://github.com/user-attachments/files/25259225/index.html)
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106796276', 'ym');
+
+    ym(106796276, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/106796276" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пастельная Радуга - Нежный Лабиринт</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+    <!-- Фон с анимированными частицами -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-pastafarianism"></i>
+                <span>Нежный Лабиринт</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about"><i class="fas fa-info-circle"></i> О игре</a>
+                <a href="#features"><i class="fas fa-star"></i> Особенности</a>
+                <a href="#gallery"><i class="fas fa-images"></i> Галерея</a>
+                <a href="#play" class="nav-play-btn">
+                    <i class="fas fa-play-circle"></i> Играть
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge">
+                    <i class="fas fa-gamepad"></i> Новая игра
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Пастельная Радуга</span><br>
+                    Нежный Лабиринт
+                </h1>
+                <p class="hero-subtitle">
+                    Уникальное игровое приключение, где каждая деталь создана для вашего наслаждения. 
+                    Погрузитесь в мир мягких цветов и приятных открытий.
+                </p>
+                <div class="hero-actions">
+                    <a href="#play" class="play-btn">
+                        <i class="fas fa-play"></i> Играть бесплатно
+                    </a>
+                    <a href="#about" class="learn-more-btn">
+                        <i class="fas fa-book-open"></i> Узнать больше
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Игроков</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Рейтинг</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Довольных</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="maze-preview">
+                    <div class="maze-grid" id="mazePreview"></div>
+                    <div class="player-preview"></div>
+                    <div class="sparkles">
+                        <div class="sparkle"></div>
+                        <div class="sparkle"></div>
+                        <div class="sparkle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- О игре -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему все влюбляются<br>в этот лабиринт?</h2>
+                <p class="section-subtitle">Это не просто игра — это терапевтическое путешествие в мир спокойствия и гармонии</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="highlight-box">
+                        <i class="fas fa-heart"></i>
+                        <h3>Исцеляющая атмосфера</h3>
+                        <p>Наша уникальная пастельная цветовая палитра специально подобрана для снижения стресса и создания ощущения комфорта.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-brain"></i>
+                        <h3>Развитие мышления</h3>
+                        <p>Каждый уровень — это не просто лабиринт, а интересная головоломка, развивающая пространственное мышление и логику.</p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <i class="fas fa-infinity"></i>
+                        <h3>Бесконечное разнообразие</h3>
+                        <p>Алгоритмы создают уникальные лабиринты для каждого игрока, гарантируя свежий опыт при каждом запуске.</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <div class="card-header">
+                                <i class="fas fa-user-circle"></i>
+                                <div>
+                                    <div class="card-name">Мария С.</div>
+                                    <div class="card-time">Играет 3 недели</div>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                "Это самая расслабляющая игра из всех, что я пробовала. После тяжелого дня нет ничего лучше, чем погрузиться в этот нежный мир пастельных лабиринтов. Рекомендую всем, кто хочет отдохнуть душой!"
+                            </div>
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Особенности -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Магия в каждой детали</h2>
+                <p class="section-subtitle">Откройте для себя уникальные возможности игры</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ffb8e9, #ff9ad5);">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Пастельная палитра</h3>
+                    <p>8 успокаивающих цветов для персонажа, которые можно менять в любой момент</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #8ad6ff, #6bc7ff);">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Умные лабиринты</h3>
+                    <p>Алгоритм создает идеально сбалансированные уровни сложности</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #a8ffc3, #82ffae);">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Система достижений</h3>
+                    <p>Собирайте награды и соревнуйтесь с друзьями за лучший результат</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #d6a8ff, #c28aff);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Полная адаптивность</h3>
+                    <p>Играйте на любом устройстве: компьютере, планшете или телефоне</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ffffa8, #fffd82);">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Расслабляющий саундтрек</h3>
+                    <p>Оригинальная музыка создана для полного погружения в атмосферу</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #a8ffff, #82f7f7);">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Сохранение прогресса</h3>
+                    <p>Ваши достижения автоматически сохраняются в облаке</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Взгляните на магию</h2>
+                <p class="section-subtitle">Кадры из игры, которые завораживают</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #ffb8e9, #d6a8ff);">
+                        <div class="gallery-maze"></div>
+                    </div>
+                    <div class="gallery-caption">"Розовый рассвет" - Уровень 3</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #8ad6ff, #a8ffff);">
+                        <div class="gallery-maze"></div>
+                    </div>
+                    <div class="gallery-caption">"Голубая лагуна" - Уровень 5</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #a8ffc3, #ffffa8);">
+                        <div class="gallery-maze"></div>
+                    </div>
+                    <div class="gallery-caption">"Солнечный сад" - Уровень 7</div>
+                </div>
+            </div>
+            
+            <div class="gallery-stats">
+                <div class="gallery-stat">
+                    <div class="stat-large">50+</div>
+                    <div class="stat-label">Уникальных уровней</div>
+                </div>
+                <div class="gallery-stat">
+                    <div class="stat-large">8</div>
+                    <div class="stat-label">Цветовых тем</div>
+                </div>
+                <div class="gallery-stat">
+                    <div class="stat-large">∞</div>
+                    <div class="stat-label">Комбинаций лабиринтов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="cta" id="play">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Готовы к путешествию?</h2>
+                <p class="cta-subtitle">
+                    Присоединяйтесь к тысячам игроков, которые уже нашли свой уголок спокойствия<br>
+                    в мире Пастельной Радуги. Это бесплатно, легко и невероятно приятно.
+                </p>
+                
+                <div class="cta-actions">
+                    <a href="#" class="cta-btn" id="playNowBtn">
+                        <i class="fas fa-play-circle"></i> Начать играть сейчас
+                    </a>
+                    <a href="#" class="cta-secondary-btn">
+                        <i class="fas fa-eye"></i> Посмотреть демо
+                    </a>
+                </div>
+                
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Никакой регистрации</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Никакой рекламы</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Никаких платежей</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Что говорят игроки</h2>
+                <p class="section-subtitle">Реальные отзывы от наших игроков</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ffb8e9, #d6a8ff);">
+                            АН
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Анна Н.</div>
+                            <div class="testimonial-role">Дизайнер, 28 лет</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Как дизайнер я ценю эстетику, и эта игра — настоящее произведение искусства. Пастельные тона, плавные анимации... Это не просто игра, это терапия для глаз и души."
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #8ad6ff, #a8ffff);">
+                            МК
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Максим К.</div>
+                            <div class="testimonial-role">Программист, 32 года</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Идеальный способ отдохнуть после кода. Алгоритмы лабиринтов поражают, каждый раз новый вызов. А интерфейс настолько интуитивный, что даже моя мама разобралась!"
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #a8ffc3, #ffffa8);">
+                            ОС
+                        </div>
+                        <div>
+                            <div class="testimonial-name">Ольга С.</div>
+                            <div class="testimonial-role">Учитель, 45 лет</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-text">
+                        "Рекомендую эту игру своим ученикам для развития логики. Да и сама играю с удовольствием вечерами. Особенно нравится менять цвета персонажа под настроение."
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (без социальных сетей) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-pastafarianism"></i>
+                    <span>Нежный Лабиринт</span>
+                </div>
+                <p class="footer-text">
+                    Бесплатная терапевтическая игра для всех, кто ценит красоту, гармонию и интересные головоломки.
+                </p>
+                
+                <!-- Убраны иконки социальных сетей -->
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Пастельная Радуга - Нежный Лабиринт. Все права защищены.</p>
+                    <p>Сделано с <i class="fas fa-heart" style="color: #ffb8e9;"></i> для всех любителей прекрасного</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Попап для игры -->
+    <div class="play-popup" id="playPopup">
+        <div class="popup-content">
+            <button class="popup-close" id="closePopup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-body">
+                <h3>Наслаждайтесь игрой!</h3>
+                <p>Чтобы начать играть в "Пастельная Радуга - Нежный Лабиринт", просто нажмите кнопку ниже:</p>
+                <a href="game.html" class="popup-play-btn">
+                    <i class="fas fa-play"></i> Перейти к игре
+                </a>
+                <div class="popup-features">
+                    <div><i class="fas fa-check"></i> Бесплатно</div>
+                    <div><i class="fas fa-check"></i> Без регистрации</div>
+                    <div><i class="fas fa-check"></i> Работает на всех устройствах</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
